@@ -170,9 +170,7 @@ export default (
     }
 
     return convertReactAdminDataToHydraData(resource, data).then(data =>
-      undefined === resource.encodeData
-        ? JSON.stringify(data)
-        : resource.encodeData(data),
+      JSON.stringify(data),
     );
   };
 
